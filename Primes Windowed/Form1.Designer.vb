@@ -256,8 +256,8 @@ Partial Class Form1
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(664, 387)
         Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = "Primes Windowed - Alpha 0.0.1" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "A program that finds prime numbers by moding every" &
-    " 2 numbers by half of its self. For more information go to "
+        Me.RichTextBox1.Text = "Primes Windowed -- Alpha 0.0.1" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "A program that finds prime numbers by moding ever" &
+    "y 2 numbers by half of its self. For more information go to "
         '
         'Form1
         '
