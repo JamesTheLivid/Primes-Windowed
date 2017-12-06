@@ -25,6 +25,11 @@ Partial Class formMainWindow
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formMainWindow))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabSettings = New System.Windows.Forms.TabPage()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.barProgres1 = New System.Windows.Forms.ProgressBar()
+        Me.ckboxClearText = New System.Windows.Forms.CheckBox()
+        Me.comboFormatingMeth = New System.Windows.Forms.ComboBox()
+        Me.lblFormattingMeth = New System.Windows.Forms.Label()
         Me.lblSaveUp = New System.Windows.Forms.Button()
         Me.lblDebug = New System.Windows.Forms.Button()
         Me.lblExit = New System.Windows.Forms.Button()
@@ -35,15 +40,20 @@ Partial Class formMainWindow
         Me.lblStartValue = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.tabOutput = New System.Windows.Forms.TabPage()
+        Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
+        Me.barProgres2 = New System.Windows.Forms.ProgressBar()
+        Me.lblOutPut = New System.Windows.Forms.Label()
+        Me.rtbOutput = New System.Windows.Forms.RichTextBox()
         Me.tabAbout = New System.Windows.Forms.TabPage()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.lblFormattingMeth = New System.Windows.Forms.Label()
-        Me.comboFormatingMeth = New System.Windows.Forms.ComboBox()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.lblFileCode = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabSettings.SuspendLayout()
         CType(Me.updownGoOnFor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.updownStartValue, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabOutput.SuspendLayout()
         Me.tabAbout.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,6 +71,9 @@ Partial Class formMainWindow
         'tabSettings
         '
         Me.tabSettings.BackColor = System.Drawing.SystemColors.Control
+        Me.tabSettings.Controls.Add(Me.btnStart)
+        Me.tabSettings.Controls.Add(Me.barProgres1)
+        Me.tabSettings.Controls.Add(Me.ckboxClearText)
         Me.tabSettings.Controls.Add(Me.comboFormatingMeth)
         Me.tabSettings.Controls.Add(Me.lblFormattingMeth)
         Me.tabSettings.Controls.Add(Me.lblSaveUp)
@@ -78,6 +91,50 @@ Partial Class formMainWindow
         Me.tabSettings.Size = New System.Drawing.Size(686, 412)
         Me.tabSettings.TabIndex = 0
         Me.tabSettings.Text = "Settings"
+        '
+        'btnStart
+        '
+        Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStart.Location = New System.Drawing.Point(13, 281)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(662, 62)
+        Me.btnStart.TabIndex = 13
+        Me.btnStart.Text = "Start"
+        Me.btnStart.UseVisualStyleBackColor = True
+        '
+        'barProgres1
+        '
+        Me.barProgres1.Location = New System.Drawing.Point(13, 349)
+        Me.barProgres1.Name = "barProgres1"
+        Me.barProgres1.Size = New System.Drawing.Size(662, 23)
+        Me.barProgres1.TabIndex = 12
+        '
+        'ckboxClearText
+        '
+        Me.ckboxClearText.AutoSize = True
+        Me.ckboxClearText.Location = New System.Drawing.Point(11, 135)
+        Me.ckboxClearText.Name = "ckboxClearText"
+        Me.ckboxClearText.Size = New System.Drawing.Size(81, 17)
+        Me.ckboxClearText.TabIndex = 11
+        Me.ckboxClearText.Text = "CheckBox1"
+        Me.ckboxClearText.UseVisualStyleBackColor = True
+        '
+        'comboFormatingMeth
+        '
+        Me.comboFormatingMeth.FormattingEnabled = True
+        Me.comboFormatingMeth.Location = New System.Drawing.Point(11, 102)
+        Me.comboFormatingMeth.Name = "comboFormatingMeth"
+        Me.comboFormatingMeth.Size = New System.Drawing.Size(250, 21)
+        Me.comboFormatingMeth.TabIndex = 10
+        '
+        'lblFormattingMeth
+        '
+        Me.lblFormattingMeth.AutoSize = True
+        Me.lblFormattingMeth.Location = New System.Drawing.Point(8, 85)
+        Me.lblFormattingMeth.Name = "lblFormattingMeth"
+        Me.lblFormattingMeth.Size = New System.Drawing.Size(100, 13)
+        Me.lblFormattingMeth.TabIndex = 9
+        Me.lblFormattingMeth.Text = "Formating Methords"
         '
         'lblSaveUp
         '
@@ -163,12 +220,48 @@ Partial Class formMainWindow
         'tabOutput
         '
         Me.tabOutput.BackColor = System.Drawing.SystemColors.Control
+        Me.tabOutput.Controls.Add(Me.lblFileCode)
+        Me.tabOutput.Controls.Add(Me.HScrollBar1)
+        Me.tabOutput.Controls.Add(Me.barProgres2)
+        Me.tabOutput.Controls.Add(Me.lblOutPut)
+        Me.tabOutput.Controls.Add(Me.rtbOutput)
         Me.tabOutput.Location = New System.Drawing.Point(4, 22)
         Me.tabOutput.Name = "tabOutput"
         Me.tabOutput.Padding = New System.Windows.Forms.Padding(3)
         Me.tabOutput.Size = New System.Drawing.Size(686, 412)
         Me.tabOutput.TabIndex = 1
         Me.tabOutput.Text = "Output"
+        '
+        'HScrollBar1
+        '
+        Me.HScrollBar1.Location = New System.Drawing.Point(350, 38)
+        Me.HScrollBar1.Name = "HScrollBar1"
+        Me.HScrollBar1.Size = New System.Drawing.Size(327, 336)
+        Me.HScrollBar1.TabIndex = 3
+        '
+        'barProgres2
+        '
+        Me.barProgres2.Location = New System.Drawing.Point(350, 377)
+        Me.barProgres2.Name = "barProgres2"
+        Me.barProgres2.Size = New System.Drawing.Size(327, 23)
+        Me.barProgres2.TabIndex = 2
+        '
+        'lblOutPut
+        '
+        Me.lblOutPut.AutoSize = True
+        Me.lblOutPut.Location = New System.Drawing.Point(8, 12)
+        Me.lblOutPut.Name = "lblOutPut"
+        Me.lblOutPut.Size = New System.Drawing.Size(75, 13)
+        Me.lblOutPut.TabIndex = 1
+        Me.lblOutPut.Text = "Data From File"
+        '
+        'rtbOutput
+        '
+        Me.rtbOutput.Location = New System.Drawing.Point(10, 38)
+        Me.rtbOutput.Name = "rtbOutput"
+        Me.rtbOutput.Size = New System.Drawing.Size(333, 363)
+        Me.rtbOutput.TabIndex = 0
+        Me.rtbOutput.Text = ""
         '
         'tabAbout
         '
@@ -185,9 +278,9 @@ Partial Class formMainWindow
         '
         Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Control
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox2.Location = New System.Drawing.Point(10, 305)
+        Me.RichTextBox2.Location = New System.Drawing.Point(10, 346)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(667, 96)
+        Me.RichTextBox2.Size = New System.Drawing.Size(667, 55)
         Me.RichTextBox2.TabIndex = 1
         Me.RichTextBox2.Text = "(c) Copyright James Robinson 2017" & Global.Microsoft.VisualBasic.ChrW(10) & "All rights reserved" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "If you would like to use t" &
     "his program please contact James Robinson on GitHub (link above)"
@@ -204,22 +297,18 @@ Partial Class formMainWindow
     " 2 numbers by half of its self. For more information go to https://github.com/Ja" &
     "mesTheLivid/Primes-Windowed" & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'lblFormattingMeth
+        'OpenFileDialog
         '
-        Me.lblFormattingMeth.AutoSize = True
-        Me.lblFormattingMeth.Location = New System.Drawing.Point(13, 99)
-        Me.lblFormattingMeth.Name = "lblFormattingMeth"
-        Me.lblFormattingMeth.Size = New System.Drawing.Size(100, 13)
-        Me.lblFormattingMeth.TabIndex = 9
-        Me.lblFormattingMeth.Text = "Formating Methords"
+        Me.OpenFileDialog.FileName = "OpenFileDialog1"
         '
-        'comboFormatingMeth
+        'lblFileCode
         '
-        Me.comboFormatingMeth.FormattingEnabled = True
-        Me.comboFormatingMeth.Location = New System.Drawing.Point(16, 116)
-        Me.comboFormatingMeth.Name = "comboFormatingMeth"
-        Me.comboFormatingMeth.Size = New System.Drawing.Size(121, 21)
-        Me.comboFormatingMeth.TabIndex = 10
+        Me.lblFileCode.AutoSize = True
+        Me.lblFileCode.Location = New System.Drawing.Point(90, 11)
+        Me.lblFileCode.Name = "lblFileCode"
+        Me.lblFileCode.Size = New System.Drawing.Size(57, 13)
+        Me.lblFileCode.TabIndex = 4
+        Me.lblFileCode.Text = "File Code: "
         '
         'formMainWindow
         '
@@ -235,6 +324,8 @@ Partial Class formMainWindow
         Me.tabSettings.PerformLayout()
         CType(Me.updownGoOnFor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.updownStartValue, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabOutput.ResumeLayout(False)
+        Me.tabOutput.PerformLayout()
         Me.tabAbout.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -257,4 +348,13 @@ Partial Class formMainWindow
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents comboFormatingMeth As ComboBox
     Friend WithEvents lblFormattingMeth As Label
+    Friend WithEvents barProgres1 As ProgressBar
+    Friend WithEvents ckboxClearText As CheckBox
+    Friend WithEvents btnStart As Button
+    Friend WithEvents barProgres2 As ProgressBar
+    Friend WithEvents lblOutPut As Label
+    Friend WithEvents rtbOutput As RichTextBox
+    Friend WithEvents HScrollBar1 As HScrollBar
+    Friend WithEvents OpenFileDialog As OpenFileDialog
+    Friend WithEvents lblFileCode As Label
 End Class

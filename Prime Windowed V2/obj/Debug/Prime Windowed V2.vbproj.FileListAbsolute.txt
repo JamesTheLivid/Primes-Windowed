@@ -1,0 +1,12 @@
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\bin\Debug\Prime Windowed V2.exe.config
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\bin\Debug\Prime Windowed V2.exe
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\bin\Debug\Prime Windowed V2.pdb
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\bin\Debug\Prime Windowed V2.xml
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime Windowed V2.vbprojResolveAssemblyReference.cache
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime_Windowed_V2.formMainWindow.resources
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime_Windowed_V2.Resources.resources
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime Windowed V2.vbproj.GenerateResource.Cache
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime Windowed V2.vbproj.CoreCompileInputs.cache
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime Windowed V2.exe
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime Windowed V2.xml
+D:\James Robinson\Documents\GitHub\Primes-Windowed\Prime Windowed V2\obj\Debug\Prime Windowed V2.pdb
