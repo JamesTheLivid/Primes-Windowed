@@ -36,8 +36,10 @@ Partial Class formMainWindow
         Me.lblName = New System.Windows.Forms.Label()
         Me.tabOutput = New System.Windows.Forms.TabPage()
         Me.tabAbout = New System.Windows.Forms.TabPage()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.lblFormattingMeth = New System.Windows.Forms.Label()
+        Me.comboFormatingMeth = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.tabSettings.SuspendLayout()
         CType(Me.updownGoOnFor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +61,8 @@ Partial Class formMainWindow
         'tabSettings
         '
         Me.tabSettings.BackColor = System.Drawing.SystemColors.Control
+        Me.tabSettings.Controls.Add(Me.comboFormatingMeth)
+        Me.tabSettings.Controls.Add(Me.lblFormattingMeth)
         Me.tabSettings.Controls.Add(Me.lblSaveUp)
         Me.tabSettings.Controls.Add(Me.lblDebug)
         Me.tabSettings.Controls.Add(Me.lblExit)
@@ -177,6 +181,17 @@ Partial Class formMainWindow
         Me.tabAbout.TabIndex = 2
         Me.tabAbout.Text = "About"
         '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Location = New System.Drawing.Point(10, 305)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(667, 96)
+        Me.RichTextBox2.TabIndex = 1
+        Me.RichTextBox2.Text = "(c) Copyright James Robinson 2017" & Global.Microsoft.VisualBasic.ChrW(10) & "All rights reserved" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "If you would like to use t" &
+    "his program please contact James Robinson on GitHub (link above)"
+        '
         'RichTextBox1
         '
         Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Control
@@ -189,16 +204,22 @@ Partial Class formMainWindow
     " 2 numbers by half of its self. For more information go to https://github.com/Ja" &
     "mesTheLivid/Primes-Windowed" & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'RichTextBox2
+        'lblFormattingMeth
         '
-        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox2.Location = New System.Drawing.Point(10, 305)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(667, 96)
-        Me.RichTextBox2.TabIndex = 1
-        Me.RichTextBox2.Text = "(c) Copyright James Robinson 2017" & Global.Microsoft.VisualBasic.ChrW(10) & "All rights reserved" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "If you would like to use t" &
-    "his program please contact James Robinson on GitHub (link above)"
+        Me.lblFormattingMeth.AutoSize = True
+        Me.lblFormattingMeth.Location = New System.Drawing.Point(13, 99)
+        Me.lblFormattingMeth.Name = "lblFormattingMeth"
+        Me.lblFormattingMeth.Size = New System.Drawing.Size(100, 13)
+        Me.lblFormattingMeth.TabIndex = 9
+        Me.lblFormattingMeth.Text = "Formating Methords"
+        '
+        'comboFormatingMeth
+        '
+        Me.comboFormatingMeth.FormattingEnabled = True
+        Me.comboFormatingMeth.Location = New System.Drawing.Point(16, 116)
+        Me.comboFormatingMeth.Name = "comboFormatingMeth"
+        Me.comboFormatingMeth.Size = New System.Drawing.Size(121, 21)
+        Me.comboFormatingMeth.TabIndex = 10
         '
         'formMainWindow
         '
@@ -234,4 +255,6 @@ Partial Class formMainWindow
     Friend WithEvents lblJamesRobinson As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents comboFormatingMeth As ComboBox
+    Friend WithEvents lblFormattingMeth As Label
 End Class
