@@ -1,11 +1,12 @@
 ﻿Public Class formMainWindow
 
     'Global Variable Decleration
-    Public FileLocation As String = "C:\"
+    Public fileLocation As String = "C:\"
+    Public fileLocationAndName As String
     Private primeStart As Integer = Nothing
     Private primeGoFor As Integer = Nothing
     Private fileTimeVar As Integer = 0
-    Private 
+    'Private 
 
     Private Sub tabAbout_Click(sender As Object, e As EventArgs) Handles tabAbout.Click
 
@@ -17,7 +18,12 @@
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
 
+        If fileLocation <> "C:\" Then
 
+            fileTimeVar = DateTime.Now.ToString("hhmmss")
+            Debug.WriteLine(fileTimeVar)
+
+        End If
 
     End Sub
 
@@ -50,6 +56,9 @@
     Private Sub OpenFileDialog_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog.FileOk
 
     End Sub
+
+
+    '##################Line##################'
 
     Private Sub PrimesPrimeFinder(progName As String)
 
