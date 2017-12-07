@@ -5,6 +5,7 @@
     Private primeStart As Integer = Nothing
     Private primeGoFor As Integer = Nothing
     Private fileTimeVar As Integer = 0
+    Private 
 
     Private Sub tabAbout_Click(sender As Object, e As EventArgs) Handles tabAbout.Click
 
@@ -59,7 +60,8 @@
 
 
         'Console.Write("Go On For: ")
-        Dim primeMax As Integer = Console.ReadLine()
+        Dim primeMax As Integer = updownStartValue.Value
+
 
         ' Console.Write("Start Value: ")
         Dim primeStartValue As Integer = Console.ReadLine()
