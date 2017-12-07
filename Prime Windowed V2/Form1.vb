@@ -4,7 +4,7 @@
     Public FileLocation As String = "C:\"
     Private primeStart As Integer = Nothing
     Private primeGoFor As Integer = Nothing
-
+    Private fileTimeVar As Integer = 0
 
     Private Sub tabAbout_Click(sender As Object, e As EventArgs) Handles tabAbout.Click
 
@@ -54,12 +54,8 @@
 
         Dim file As System.IO.StreamWriter
 
-        Dim fileTimeVar As String = DateTime.Now.ToString("hhmmss")
-        ' Console.Write("Save Directory: ")
-
-        Dim fileDirectory As String = Console.ReadLine()
         'Console.WriteLine("Your File Code is: " & fileTimeVar)
-        file = My.Computer.FileSystem.OpenTextFileWriter(fileDirectory & "\PrimeFile" & DateTime.Now.ToString("hhmmss") & ".txt", True)
+        file = My.Computer.FileSystem.OpenTextFileWriter(FileLocation & "\PrimeFile" & DateTime.Now.ToString("hhmmss") & ".txt", True)
 
 
         'Console.Write("Go On For: ")
